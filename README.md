@@ -1,4 +1,4 @@
-**Fix for Docker Monitoring in SigNoz**
+Fix for Docker Monitoring in SigNoz
 
 Overview
 SigNoz provides built-in support for monitoring Docker containers through the OpenTelemetry (OTEL) Collector. However, the default configuration in the original setup had two major problems:
@@ -38,7 +38,7 @@ To ensure all logs are captured, especially from the essential services, the fil
 # -type: filter
 #   id: signoz_logs_filter
 #   expr: 'attributes.container_name matches "^signoz-(logspout|frontend|alertmanager|query-service|otel-collector|clickhouse|zookeeper)"'
-**
+
 2. Updated the Versions of Core Services
 The query-service and frontend containers were upgraded to the latest stable release (version 0.73.0):
 
@@ -53,6 +53,7 @@ Outcome:
 Logs from all essential Docker containers are now being collected and shown in SigNoz.
 The OTEL Collector is no longer excluding important logs.
 Upgrading to the latest service versions has improved system compatibility and performance.KER_TAG:-0.73.0}
+
 
   
 # signoz
