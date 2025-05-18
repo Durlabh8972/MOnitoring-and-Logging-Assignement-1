@@ -35,10 +35,10 @@ Changes Made
 1. Disabled the Log Filter in the OTEL Collector
 To ensure all logs are captured, especially from the essential services, the filter section in the OTEL Collector config was commented out:
 
-# - type: filter
+# -type: filter
 #   id: signoz_logs_filter
 #   expr: 'attributes.container_name matches "^signoz-(logspout|frontend|alertmanager|query-service|otel-collector|clickhouse|zookeeper)"'
-
+**
 2. Updated the Versions of Core Services
 The query-service and frontend containers were upgraded to the latest stable release (version 0.73.0):
 
